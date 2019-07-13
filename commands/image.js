@@ -52,14 +52,12 @@ async function getAwsImage(hero, savePath) {
   return new Promise((resolve, reject) => {
     fetchImage("png", hero, savePath)
       .then(filePath => {
-        console.log("png found..", filePath);
         resolve(filePath);
       })
       .catch(() => {
         console.log("PNG not found.");
         fetchImage("jpg", hero, savePath)
           .then(filePath => {
-            console.log("jpg found.");
             resolve(filePath);
           })
           .catch(err => {
