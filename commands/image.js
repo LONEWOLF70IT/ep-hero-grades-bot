@@ -88,7 +88,7 @@ const getImage = async (hero, message) => {
         img.onerror = err => {
           throw err;
         };
-        img.src = fs.createReadStream(filePath).read();
+        img.src = filePath;
         sendToDiscord(true);
       })
       .catch(err => {
