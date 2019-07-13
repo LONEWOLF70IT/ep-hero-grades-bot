@@ -2,7 +2,6 @@ const Airtable = require("airtable");
 const base = new Airtable({ apiKey: process.env.AIRTABLEAPI }).base(
   process.env.AIRTABLEBASE
 );
-const Logger = require("./Logger");
 const gradesBase = base("Grades");
 const heroBase = base("Heroes");
 const { getAsync, setAsync } = require("./cache");
